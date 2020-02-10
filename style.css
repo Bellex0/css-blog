@@ -4,16 +4,6 @@ html, body{
     overflow: hidden;
     margin: 0;
   }
-
-  .wrapper{
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box
-  }
-
-  img{
-      transform: 
-  }
   
   .grass, .sky, .ground{
     position: relative;
@@ -26,26 +16,79 @@ html, body{
   
   .grass{
     height: 30%;
-    background: green;
+    background: seagreen;
   }
 
   .ground{
       height: 30%;
-      background: burlywood
+      background: burlywood;
+      border-top: 10px solid #8a6856;
+      border-bottom: 10px solid #8a6856;
+      box-sizing: border-box;
+      width: 100%;
   }
 
   /* ELEMENTS TO ANIMATE */
-  .psyduck{
+  .jigglypuff{
       position: absolute;
+      width: 300px;
+      height: 200px;
       top: -80px;
       left: 0px;
       animation-name: drive;
       animation-duration: 3s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+     
+  }
+
+  .psyduck{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    animation-name: drive;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+  }
+
+  .cloud{
+      position: absolute;
+  }
+
+  .cloud:nth-child(1){
+      width: 200px;
+      top: 120px;
+      opacity: 0.5;
+      animation: wind 80s linear infinite reverse 
+  }
+
+  .cloud:nth-child(2){
+      width: 300px;
+      top: 0;
+      animation: wind 80s linear infinite reverse 
   }
 
   /* KEYFRAMES */
 
   @keyframes drive{
-      from{ transform: translateX(0) }
-      to{ transform: translateX(500px)}
+      from{ transform: translateX(-200px) }
+      to{ transform: translateX(1400px)}
   }
+
+  @keyframes wind{
+      from{ left: -300px}
+      to{ left: 100% }
+  }
+
+  @keyframes wind{
+    from{ left: -300px}
+    to{ left: 100% }
+}
+
+@keyframes jump{
+    0%{ top: -80px }
+    50%{ top: -140px }
+    100%{ top: -80px } 
+}
