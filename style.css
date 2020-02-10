@@ -4,6 +4,16 @@ html, body{
     overflow: hidden;
     margin: 0;
   }
+
+  .wrapper{
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box
+  }
+
+  img{
+      transform: 
+  }
   
   .grass, .sky, .ground{
     position: relative;
@@ -22,4 +32,20 @@ html, body{
   .ground{
       height: 30%;
       background: burlywood
+  }
+
+  /* ELEMENTS TO ANIMATE */
+  .psyduck{
+      position: absolute;
+      top: -80px;
+      left: 0px;
+      animation-name: drive;
+      animation-duration: 3s;
+  }
+
+  /* KEYFRAMES */
+
+  @keyframes drive{
+      from{ transform: translateX(0) }
+      to{ transform: translateX(500px)}
   }
