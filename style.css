@@ -1,0 +1,25 @@
+html, body{
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .grass, .sky, .ground{
+    position: relative;
+  }
+  
+  .sky{
+    height: 40%;
+    background: skyblue;
+  }
+  
+  .grass{
+    height: 30%;
+    background: green;
+  }
+
+  .ground{
+      height: 30%;
+      background: burlywood
+  }
