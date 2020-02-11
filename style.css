@@ -35,11 +35,8 @@ html, body{
       height: 200px;
       top: -80px;
       left: 0px;
-      animation-name: drive;
-      animation-duration: 3s;
-      animation-fill-mode: both;
-      animation-iteration-count: infinite;
-     
+      animation: drive 3s both infinite linear, 
+                  jump .3s 3 1.2s ease 
   }
 
   .psyduck{
@@ -47,12 +44,12 @@ html, body{
     top: 30px;
     left: 0px;
     animation-name: drive;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-direction: reverse;
   }
-
+ 
   .cloud{
       position: absolute;
   }
@@ -67,28 +64,24 @@ html, body{
   .cloud:nth-child(2){
       width: 300px;
       top: 0;
-      animation: wind 80s linear infinite reverse 
+      animation: wind 50s linear infinite reverse 
   }
 
   /* KEYFRAMES */
 
-  @keyframes drive{
-      from{ transform: translateX(-200px) }
-      to{ transform: translateX(1400px)}
+  @keyframes drive{ 
+      from{ transform: translateX(-100px) }
+      to{ transform: translateX(1300px)}
   }
+  
+  @keyframes jump{
+      0%{ top: -80px }
+      50%{ top: -140px }
+      100%{ top: -80px } 
+  } 
 
-  @keyframes wind{
-      from{ left: -300px}
-      to{ left: 100% }
-  }
-
-  @keyframes wind{
+  @keyframes wind{ 
     from{ left: -300px}
     to{ left: 100% }
 }
 
-@keyframes jump{
-    0%{ top: -80px }
-    50%{ top: -140px }
-    100%{ top: -80px } 
-}
